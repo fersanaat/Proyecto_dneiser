@@ -1,0 +1,73 @@
+{% extends 'dneiser/base.html' %}
+{% load static %}
+{% block content_forms %}
+<section>
+	<h2> Encuentra tu Producto </h2>
+	<form method="GET" action= "{% url 'product_list'%}">
+	{% csrf_token%}
+	<input type="text" name ="q" placeholder="buscar productos.."
+	value="{{ query|default_if_none:''}}">
+	<button type="submit"> buscar</button>
+	</form>
+	
+	<br>
+	
+	<h2> Listado de Productos </h2>
+	{% if products %}
+		<ul>
+			{% for p in products %}
+				<li>
+					{{p.name}} - $ {{p.price}}
+					{% if p.image %}
+						<img src="{{p.image.url}}">
+					{% else %}
+						<p> Imagen no disponible. </p>
+					{% endif %}
+					<div class="redbone" >
+						
+						<a href="{% url 'product_detail' id=p.id %}"> Mostrar</a>
+						<a href="{% url 'product_update' id=p.id %}"> Actualizar</a>
+						<a href="{% url 'product_delete' id=p.id %}"> Borrar </a>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+		
+		<div class="pagination">
+			<span class ="step-links">
+				{% if page_obj.has_previous %}
+					<a href="?page={{ page_obj.previous_page_number }}
+					{% if query %}&q={{ query }}{% endif %}"> anterior </a>
+				{% endif %}
+				<span class="current">
+					Pagina {{page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+				</span>
+				
+				{% if page_obj.has_next %}
+					<a href="?page={{ page_obj.next_page_number }}
+					{% if query %}&q={{ query }} {% endif %}"> siguiente </a>
+			</span>
+		</div>
+	
+		{% else%}
+			<p> no se encontraron productos para "{{ query }}". </p>
+		{% endif %}
+			
+			
+		{% else %}
+			<p> No hay productos disponibles. </p>
+		{% endif %}
+		
+		
+		{% if user.is_authenticated %}
+			<p> Hola, {{user.username}}! <a href="{% url 'logout' %}"> Cerrar Sesion</a></p>
+		{% else %}
+			<p><a href="{% url 'login' %}"> Iniciar Sesion </a> |<a href="{% url 'register'%}">registrarse</a></p>
+		{% endif %}
+	
+	<p>
+		<a href="{% url 'product_list' %}"> volver a la lista de productos</a>
+		<a href="{% url 'product_create' %}"> Crear Productos </a>
+	</p>
+</section>
+{% endblock content_forms%}

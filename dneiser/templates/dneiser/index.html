@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pagina Web</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'dneiser/css/index.css'%}">
+    </head>
+    <body>
+	
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<header> 
+		 <div class="container">
+            <p class="logo"> D´NEISER </p>
+			<!-- <img class="conten-img" src="logo.jpg"> -->
+            <nav>
+                <a class="redone" href="#somos-proya"> Quienes Somos </a>
+                <a class="roseone"href="#nuestras-areas"> Nuestros areas </a>
+                <a class="lighone" href="#caracteristicas"> Características </a>
+                <a  href="#CONTACTO"> 
+                {% if user.is_authenticated %}
+			<p> Hola, {{user.username}}! <a href="{% url 'logout' %}"> Cerrar Sesion</a></p>
+		{% else %}
+			<p><a href="{% url 'login' %}"> Iniciar Sesion </a> |<a href="{% url 'register'%}">registrarse</a></p>
+		{% endif %} </a>
+                <button class="lighter">
+                    <a href="{% url 'product_list' %}"></a>
+                 </button>
+            </nav>
+			 
+        </div>
+		
+		</header>
+		
+		<main>
+			<section id="somos-proya">
+				<div  class="container">
+					
+				</div>
+                <div class="container2">
+
+                    <h1 class="excep1">Somos <br>D´NEISER</br> </h1>
+                    <h2 class="excep2"> Esta es nuestra web</h2>
+                    <p class="excep3"> <strong>!Conocenos!</strong> <br> Lo que hacemos, nuestros catalogos, ubicacion y contacto  </br> </p>
+                </div>
+			</section>
+            <section id="nuestras-areas">
+                <div class="firstoption">
+                    <h1>  Nuestras Areas </h1>
+                    <div class="progra">
+                        <div class="golos1">
+                            <h3>PAPELERIA</h3>
+                            <p> Cada trazo, una nueva posibilidad </p>
+                            <button>
+                               <a href="{% url 'papeleria' %}">VER</a>
+                               </button>
+                            
+                        </div>
+                        <div class="golos2">
+                            <h3>DETALLES </h3>
+                            <p>Creando momentos innolvidables </p>
+                            <button>
+                               <a href="{% url 'detalles' %}">VER</a>
+                            </button>
+                            
+                        </div>
+                    </div>  
+
+
+                    <div class="progra1">
+                        <div class="golos3">
+                            <h3>MAQUILLAJE Y SKIN CARE</h3>
+                            <p>Tu belleza, nuestra inspiracion</p>
+                            <button>
+                               <a href="{% url 'maquillaje' %}">VER</a>
+                            </button>
+                            
+                        </div>  
+                        <div class="golos4">
+                            <h3>GOLOSINAS</h3>
+                            <p> El dulce momento que te mereces </p>
+                            <button>
+                               <a href="{% url 'golosina' %}">VER</a>
+                            </button>
+                            
+                        </div>  
+                    </div>
+                </div>
+            </section>
+
+            <section id="caracteristicas">
+                <div class="ubicacion">
+                    <ul>
+                         <li> ✔️ 100% online</li>
+                             <li> ✔️ Flexibilidad de horarios</li>
+                                <li> ✔️ Soporte </li>
+                                    <li> ✔️ Envio Locales </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="CONTACTO">
+                    <div class="contact-section">
+                        <h2>📝 Contáctanos</h2>
+        
+                        <div class="contact-info">
+                            <p> Encuéntranos en:</p>
+                            <p>📞 <a href="tel:+584125386283">+584125386283</a></p>
+                            <p>📍 Rubio Av 11 Entre calle 15-16 ,Estado Tachira, Venezuela</p>
+                            <p>
+                                <a href="https://instagram.com/dneiser.km" target="_blank" rel="noopener noreferrer">
+                                    <svg class="social-icon instagram-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                     Síguenos en Instagram
+                                </a>
+                        </div>
+                    </div>
+            </section> 
+    
+		</main>
+		<footer>
+            <div class="contenedor">
+                <p> &copy; PORTAL WEB </p>
+            </div>
+		</footer>
+	
+        
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'dneiser/base.html' %}
+{% load static %}
+{% block content_forms %}
+
+<section class ="login-form-section">
+	<form method="post" action="{% url 'login' %}">
+		{% csrf_token%}
+		{{ form.as_p }}
+		{% if error_message %}
+			<p style="color:red;">{{error_message }}</p>
+		{% endif %}
+		<button type="submit"> Iniciar Sesion </button>
+	</form>
+	<p>
+		¿No tienes una cuenta? <a href="{% url 'register' %}"> Registrate aqui </a>
+	</p>
+</section>
+
+
+
+
+
+{% endblock content_forms%}

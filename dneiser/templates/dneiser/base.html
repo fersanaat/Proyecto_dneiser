@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pagina Web</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="{% static 'dneiser/css/index.css'%}"> 
+    </head>
+    <body>
+        
+		<header>
+           <h1>{%block header%} Bienvenido a mi siito{%endblock%}</h1>
+		</header>
+		
+		<main>
+		{% block content_forms %}
+		<p> Contenido Principal </p>
+		{% endblock %}
+		</main>
+		
+		<footer>
+		{%block footer%}
+		<p>&copy; 2025 Mi Proyecto </p>
+		{%endblock%}
+		</footer>
+		       
+        
+    </body>
+</html>

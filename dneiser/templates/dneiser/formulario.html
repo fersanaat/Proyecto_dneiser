@@ -1,0 +1,42 @@
+{% extends 'dneiser/base.html' %}
+{% load static %}
+{% block content_forms %}
+<section class="POST">
+	<form method="post" action="{% url 'product_create'%}" enctype="multipart/form-data">
+		<fieldset>
+			{%csrf_token %}
+			
+			<label for="name"> Nombre:</label>
+			<input type="text" name="name" placeholder="Product name" requiered>
+			
+			<label for="price"> Precio: </label>
+			<input type="text" id="price" name="price" placeholder="1.5" requiered>
+			
+			
+			<label for="stock"> stock: </label>
+			<input type="number" id="stock" name="stock" requiered>
+			
+			
+			<label for="description"> Descripcion: </label>
+			<textarea name="description" placeholder="Product description"> </textarea>
+			
+			<label for="category"> Categoria:</label>
+			<select id="category" name="category">
+				<option value="">-- Seleccione una categoria -- </option>
+				{% for category_obj in categories %}
+					<option value="{{ category_obj.id}}" {% if category_obj.id == Category_id|add:"0" %}
+					selected {% endif %}>{{ category_obj.name}}</option>
+				{% endfor %}
+			</select>
+			
+			<label for="image"> Agregar imagen </label>
+			<input type="file" name="image" id="image">
+			
+			<button type="submit"> Crear </button>
+		</fieldset>
+		<p>
+		<a href="{% url 'product_list' %}"> Volver a lista </a>
+		</p>
+	</form>
+</section>
+{% endblock content_forms%}

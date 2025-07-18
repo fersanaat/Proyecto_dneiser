@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pagina Web</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'dneiser/css/maqui_page.css'%}">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<header>
+		 <div class="containe">
+		   <nav>
+                <a href="#Labiales">LABIALES </a>
+                <a href="#brillo">BRILLOS</a>
+				<a href="#Carteras">CARTERAS</a>
+				<a href="#utensilios">UTENSILIOS</a>
+            </nav>
+		
+        </div>
+		
+		
+		
+		<div class="principal">
+		
+		<h1 > Conoce nuestros productos </h1>
+		<h2> Intensifica tu belleza </h2>
+		</div>
+	
+		</header>
+		<section id="Labiales">
+			<h1> LABIALES </h1>
+			 <div class="container">
+			 
+				<div class="item 1" > 
+					<img  src="labial_dark.jpg" width="100"/> 
+				</div>
+			
+				<div class="item 2">
+					<img  src="brillohard.jpg"width="100"/> 
+				</div>
+			
+				<div class="item 3">
+					<img src="splash.jpg"width="100"/>
+				</div>
+				<div class="item 4">
+					<img src="crema_vic.jpg" width="100"/>
+				</div>
+			</div>
+		</section>
+
+		<section id="brillo">
+			<h1> Brillo </h1>
+			 <div class="container">
+			 
+				<div class="item 1" > 
+					<img  src="labial_dark.jpg" width="100"/> 
+				</div>
+			
+				<div class="item 2">
+					<img  src="brillohard.jpg"width="100"/> 
+				</div>
+			
+				<div class="item 3">
+					<img src="splash.jpg"width="100"/>
+				</div>
+				<div class="item 4">
+					<img src="crema_vic.jpg" width="100"/>
+				</div>
+			</div>
+		</section>
+			
+		
+		<section id="Carteras">
+			<h1> CARTERAS </h1>
+		 	<div class="container">
+		 
+        		<div class="item 1" > 
+					<img  src="cartera3.jpg" width="100"/> 
+				</div>
+		
+        		<div class="item 2">
+					<img  src="cartera2.jpg"width="100"/> 
+				</div>
+		
+        		<div class="item 3">
+					<img src="cartera3.jpg"width="100"/>
+				</div>
+
+        		<div class="item 4">
+					<img src="cartera4.jpg" width="100"/>
+				</div>
+			</div>
+		</section>
+
+		<section id="utensilios">
+			<h1> UTENSILIOS </h1>
+		 	<div class="container">
+		 
+        		<div class="item 1" > 
+					<img  src="cartera3.jpg" width="100"/> 
+				</div>
+		
+        		<div class="item 2">
+					<img  src="cartera2.jpg"width="100"/> 
+				</div>
+		
+        		<div class="item 3">
+					<img src="cartera3.jpg"width="100"/>
+				</div>
+
+        		<div class="item 4">
+					<img src="cartera4.jpg" width="100"/>
+				</div>
+			</div>
+		</section>
+	<button class="finalbutton"> 
+        <a href="{% url 'index' %}">INICIO</a>
+	</button>
+		
+        
+        <script src="" async defer></script>
+    </body>
+</html>

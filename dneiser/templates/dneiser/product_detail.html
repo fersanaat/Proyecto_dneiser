@@ -1,0 +1,25 @@
+{% extends 'dneiser/base.html' %}
+{% load static %}
+{% block content_forms %}
+<section>
+	<h2> {{product.name}} </h2>
+
+	<ul>
+		<li><strong>Precio:</strong> $ {{ product.price}} </li>
+		<li><strong>Descripcion:</strong> $ {{ product.description|default:"No disponible"}} </li>
+		<li><strong>Stock:</strong> $ {{ product.available|yesno:"Si,No"}} </li>
+		<li><strong>Categoria:</strong> $ {{ product.category.name|default:"Sin categoria"}} </li>
+		<li>
+		{% if product.image %}
+			<img src="{{ product.image.url }}" alt "Imagen de {{product.name}}">
+		{% else %}
+			<p> Imagen no disponible. </p>
+		{% endif %}
+		</li>
+	</ul>
+
+	<p>
+		<a href= "{% url 'product_list' %}"> volver a la lista</a>
+	</p>
+</section>
+{% endblock content_forms%}

@@ -1,0 +1,196 @@
+.container{
+	display:flex;
+	width: fit-content;
+	height: fit-content;
+	background-color:rgb(236, 179, 229);
+	padding:10px;
+	margin-top:15px ;
+	gap:40px;
+	text-align: center;
+	
+}
+
+.item1{
+	width:25%;
+	padding:25px;
+	
+}
+.item2{ 
+	width:25%;
+	padding:25px; 
+ } 
+.item3{ 
+	width:25%;
+	padding:25px;  
+ } 
+
+.item4{
+	width:25%;
+	padding:25px;
+}
+
+
+.principal{
+	font-family:'Courier New', Courier, monospace;
+	color:#FFD1D9;
+	text-align:center;
+	background-color:#63aaf7;
+	width: fit-content;
+	border-radius: 12px;
+	border-top: #37689c solid;
+	border-bottom: #37689c solid ;
+	margin: 15px auto;
+	
+}
+header
+
+header .logo{
+    margin: 0px;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blue ;
+    font-size: 4em;
+}
+
+body{
+	background-image: url("../img/bodyfont.jpg")
+}
+
+.logo{
+	color:white;
+	font-family:cooper black;
+	font-size:4em;
+	text-align:center;
+	
+}
+
+
+header .containe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin: 15px auto;
+	background-image:url("../img/logo.JPG");
+	width: 350px;
+	height: 330px;
+	background-position: center center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+
+header nav{
+    display: flex;
+    flex-direction: rows;
+    text-align: center;
+    padding-bottom: 25px;
+	color:#0408f3;
+	font-family:cooper black;
+	font-size:2em;
+	
+}
+
+
+
+header a{
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(12, 34, 231);
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+
+#Labiales .container{
+	background-image: url("../img/fonlabial.png");
+	margin: 0 auto;
+}
+#brillo .container{
+	background-image: url("../img/fonlabial.png");
+	margin: 0 auto;
+}
+#Carteras .container{
+	background-image: url("../img/fonlabial.png");
+	margin: 0 auto;
+}
+
+#utensilios .container{
+	background-image: url("../img/fonlabial.png");
+	margin: 0 auto;
+}
+
+#Labiales h1{
+	
+	background-color:#FFD1D9;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 2em;
+	color:#007bfb;
+	border-radius: 10px;
+	border: #00b7ff ridge 6px;
+	width: fit-content;
+	padding: 10px;
+	margin: 15px auto;
+} 
+
+
+#Carteras h1{
+	background-color:#FFD1D9;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 2em;
+	color:#007bfb;
+	border-radius: 10px;
+	border: #00b7ff ridge 6px;
+	width: fit-content;
+	padding: 10px;
+	text-align: center;
+	margin: 15px auto;
+}
+
+#brillo h1{
+	background-color:#FFD1D9;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 2em;
+	color:#007bfb;
+	border-radius: 10px;
+	border: #00b7ff ridge 6px;
+	width: fit-content;
+	padding: 10px;
+	text-align: center;
+	margin: 15px auto;
+}
+
+#utensilios h1{
+	background-color:#FFD1D9;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 2em;
+	color:#007bfb;
+	border-radius: 10px;
+	border: #00b7ff ridge 6px;
+	width: fit-content;
+	padding: 10px;
+	text-align: center;
+	margin: 15px auto;
+}
+
+
+button{
+	
+	margin: 15px auto;
+	display: grid;
+	grid-template-columns: auto;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: rgb(210, 202, 218);
+}

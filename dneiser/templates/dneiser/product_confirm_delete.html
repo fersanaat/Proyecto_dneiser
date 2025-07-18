@@ -1,0 +1,18 @@
+{% extends 'dneiser/base.html' %}
+{% load static %}
+{% block content_forms %}
+
+<section>
+	<h1>¿Estas seguro de que quieres eliminar "{{ product.name }}"?</h1>
+	<p> Esta accion no se puede deshacerse.</p>
+	
+	<form method="post" action="{% url 'product_delete' id=product.id %}">
+		{% csrf_token %}
+		<button type="submit" class="button-delete"> Si,eliminar</button>
+		<a href="{% url 'product_detail' id=product.id %}"> No, cancelar </a>
+	</form>
+</section>
+
+
+
+{% endblock content_forms%}
